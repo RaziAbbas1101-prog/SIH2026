@@ -78,6 +78,29 @@ Remix SevaSync AI simplifies navigation through India's vast Digital Public Infr
 
 ---
 
+## ⚡ Deployment on Vercel
+
+The repository is pre-configured with zero-configuration Vercel deployment:
+
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New Project"**.
+2. Select and import **`RaziAbbas1101-prog/SIH2026`**.
+3. **Build & Development Settings** (detected automatically):
+   - **Framework Preset**: `Vite`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. **Environment Variables**:
+   Add the following in your Vercel Project Settings > Environment Variables:
+   - `GEMINI_API_KEY`: *(Optional)* Your Google Gemini API Key for real-time model inference.
+5. Click **Deploy**!
+
+### Continuous Integration & Continuous Deployment (CI/CD)
+- **Automatic Deployments**: Every commit pushed to the `main` branch triggers an instant production build and deployment on Vercel.
+- **Preview Environments**: Any Pull Request receives a dedicated live preview URL with automatic comment updates.
+- **GitHub Actions**: Automated CI workflow (`.github/workflows/ci.yml`) runs linting and build validation across all PRs.
+- **SPA & API Routing**: `vercel.json` and `/api` serverless functions ensure deep routes (`/government-platforms/:id`, `/login`) and API endpoints (`/api/ai/ask`, `/api/health`) resolve seamlessly.
+
+---
+
 ## 🛡️ License
 
 Apache-2.0
