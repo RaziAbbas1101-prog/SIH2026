@@ -1,0 +1,90 @@
+{
+  "entities": {
+    "Platform": {
+      "title": "Platform",
+      "description": "An external government or public-service platform.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "name": { "type": "string", "description": "Platform name" },
+        "description": { "type": "string", "description": "Detailed description" },
+        "category": { "type": "string", "description": "Primary category" },
+        "officialUrl": { "type": "string", "description": "URL of the official portal" },
+        "integrationStatus": { "type": "string", "description": "Status (OFFICIAL PORTAL, AUTHORISED API, etc.)" },
+        "apiAvailable": { "type": "boolean" },
+        "requiresAuthentication": { "type": "boolean" },
+        "helpline": { "type": "string" },
+        "fees": { "type": "string" },
+        "turnaroundTime": { "type": "string" },
+        "popular": { "type": "boolean" },
+        "lastVerified": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "name", "officialUrl", "integrationStatus"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with citizen preferences and state.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "state": { "type": "string" },
+        "occupation": { "type": "string" },
+        "preferredLanguage": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid"]
+    },
+    "UserBookmark": {
+      "title": "UserBookmark",
+      "description": "Bookmarked government services for a user.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "platformId": { "type": "string" },
+        "platformName": { "type": "string" },
+        "category": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "platformId", "platformName"]
+    },
+    "UserApplication": {
+      "title": "UserApplication",
+      "description": "Citizen application tracking reference and notes.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "platformId": { "type": "string" },
+        "platformName": { "type": "string" },
+        "serviceName": { "type": "string" },
+        "referenceNumber": { "type": "string" },
+        "status": { "type": "string" },
+        "submissionDate": { "type": "string" },
+        "notes": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "serviceName", "referenceNumber", "status"]
+    }
+  },
+  "firestore": {
+    "platforms/{platformId}": {
+      "schema": "Platform",
+      "description": "Directory of government digital platforms."
+    },
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile settings and citizen preferences."
+    },
+    "users/{userId}/bookmarks/{bookmarkId}": {
+      "schema": "UserBookmark",
+      "description": "Bookmarked platforms for the user."
+    },
+    "users/{userId}/applications/{applicationId}": {
+      "schema": "UserApplication",
+      "description": "Tracked citizen applications and reference numbers."
+    }
+  }
+}

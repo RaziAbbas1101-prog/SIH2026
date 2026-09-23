@@ -1,0 +1,8 @@
+{
+  "name": "Remix SevaSync AI",
+  "description": "An intelligent interface for discovering and accessing Indian government digital services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
