@@ -14,6 +14,7 @@ import { useTranslation } from '../src/hooks/useTranslation';
 import AiAssistant from './components/AiAssistant';
 import EligibilityWizard from './components/EligibilityWizard';
 import ApplicationTracker from './components/ApplicationTracker';
+import NotificationCenter from './components/NotificationCenter';
 import { platforms } from './utils/seedPlatforms';
 import { 
   ShieldCheck, 
@@ -126,6 +127,9 @@ function Navbar({ theme, toggleTheme }: { theme: 'light' | 'dark'; toggleTheme: 
           >
             {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
           </button>
+
+          {/* Notification Center */}
+          <NotificationCenter />
 
           {/* Auth Button */}
           {user ? (
