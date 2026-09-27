@@ -94,9 +94,9 @@ export default function ApplicationTracker() {
             <FileCheck2 className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
               {t('myTracker')}
-            </h3>
+            </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
               {t('myTrackerDesc')}
             </p>
@@ -105,7 +105,7 @@ export default function ApplicationTracker() {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+          className="px-4 py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-semibold rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
         >
           <Plus className="w-4 h-4" />
           <span>{t('addApplication')}</span>
@@ -315,7 +315,7 @@ export default function ApplicationTracker() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                  className="px-5 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-semibold rounded-lg transition-colors"
                 >
                   Save Application
                 </button>

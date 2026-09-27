@@ -218,7 +218,7 @@ function Home() {
     <main className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 max-w-6xl space-y-12">
       {/* Hero Section */}
       <section className="text-center relative">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-orange-200 dark:border-orange-800">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300 rounded-full text-xs font-bold tracking-wider mb-4 border border-orange-200 dark:border-orange-800">
           <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
           <span>Official Public Services Discovery Engine • Digital India</span>
         </div>
@@ -326,7 +326,7 @@ function Home() {
                     <div className="text-[10px] uppercase font-bold text-slate-400">Featured Services:</div>
                     <div className="flex flex-wrap gap-1">
                       {platform.keyServices.slice(0, 2).map((s, idx) => (
-                        <span key={idx} className="text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded">
+                        <span key={idx} className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded">
                           {s}
                         </span>
                       ))}
@@ -338,7 +338,7 @@ function Home() {
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
                 <Link
                   to={`/government-platforms/${platform.id}`}
-                  className="font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
+                  className="font-semibold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 py-3"
                 >
                   {t('viewDetails')} <ArrowRight className="w-3 h-3" />
                 </Link>
@@ -366,10 +366,10 @@ function Home() {
       <section className="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
-            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl font-bold text-white flex items-center gap-2">
               <Phone className="w-5 h-5 text-emerald-400" />
               Official National Citizen Emergency & Service Helplines
-            </h3>
+            </h2>
             <p className="text-xs sm:text-sm text-slate-400 mt-1">
               Direct toll-free numbers operated by Central Ministries and Law Enforcement agencies.
             </p>
@@ -382,7 +382,7 @@ function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
           <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60">
             <div className="text-slate-400 text-[10px] uppercase font-bold">Cyber Financial Scam</div>
-            <a href="tel:1930" className="text-emerald-400 font-extrabold text-lg hover:underline block mt-0.5">
+            <a href="tel:1930" className="text-white font-extrabold text-lg hover:underline block mt-0.5">
               1930
             </a>
             <div className="text-[10px] text-slate-400">Immediate bank debit freeze</div>
@@ -390,7 +390,7 @@ function Home() {
 
           <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60">
             <div className="text-slate-400 text-[10px] uppercase font-bold">Aadhaar Helpline</div>
-            <a href="tel:1947" className="text-amber-400 font-extrabold text-lg hover:underline block mt-0.5">
+            <a href="tel:1947" className="text-white font-extrabold text-lg hover:underline block mt-0.5">
               1947
             </a>
             <div className="text-[10px] text-slate-400">UIDAI Citizen Support</div>
@@ -398,7 +398,7 @@ function Home() {
 
           <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60">
             <div className="text-slate-400 text-[10px] uppercase font-bold">Ayushman Bharat</div>
-            <a href="tel:14555" className="text-blue-400 font-extrabold text-lg hover:underline block mt-0.5">
+            <a href="tel:14555" className="text-white font-extrabold text-lg hover:underline block mt-0.5">
               14555
             </a>
             <div className="text-[10px] text-slate-400">PM-JAY Hospital Cover</div>
@@ -406,7 +406,7 @@ function Home() {
 
           <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60">
             <div className="text-slate-400 text-[10px] uppercase font-bold">Consumer Helpline</div>
-            <a href="tel:1915" className="text-purple-400 font-extrabold text-lg hover:underline block mt-0.5">
+            <a href="tel:1915" className="text-white font-extrabold text-lg hover:underline block mt-0.5">
               1915
             </a>
             <div className="text-[10px] text-slate-400">NCH Dispute Redressal</div>
@@ -414,7 +414,7 @@ function Home() {
 
           <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60">
             <div className="text-slate-400 text-[10px] uppercase font-bold">Kisan Call Centre</div>
-            <a href="tel:18001801551" className="text-lime-400 font-extrabold text-base hover:underline block mt-0.5">
+            <a href="tel:18001801551" className="text-white font-extrabold text-base hover:underline block mt-0.5">
               1800-180-1551
             </a>
             <div className="text-[10px] text-slate-400">Agri & Farmer Queries</div>
@@ -422,7 +422,7 @@ function Home() {
 
           <div className="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60">
             <div className="text-slate-400 text-[10px] uppercase font-bold">UMANG Governance</div>
-            <a href="tel:1800115246" className="text-teal-400 font-extrabold text-base hover:underline block mt-0.5">
+            <a href="tel:1800115246" className="text-white font-extrabold text-base hover:underline block mt-0.5">
               1800-11-5246
             </a>
             <div className="text-[10px] text-slate-400">Pan-India e-Gov Hub</div>

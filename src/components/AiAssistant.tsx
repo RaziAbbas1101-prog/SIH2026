@@ -134,7 +134,7 @@ export default function AiAssistant() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-bold text-lg sm:text-xl text-white">{t('aiAssistant')}</h3>
+              <h2 className="font-bold text-lg sm:text-xl text-white">{t('aiAssistant')}</h2>
               <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-white/25 rounded-full text-white">
                 Live & Verified
               </span>
@@ -160,13 +160,13 @@ export default function AiAssistant() {
           <HelpCircle className="w-3.5 h-3.5 text-orange-500" />
           <span>{t('popularQuestions')}:</span>
         </div>
-        <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar text-xs">
-          {QUICK_QUESTIONS.map((q, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          {QUICK_QUESTIONS.slice(0, 4).map((q, i) => (
             <button
               key={i}
               onClick={() => handleSend(q)}
               disabled={loading}
-              className="shrink-0 px-3 py-1.5 bg-white dark:bg-slate-850 hover:bg-orange-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-750 text-slate-700 dark:text-slate-300 rounded-full transition-all hover:border-orange-300 dark:hover:border-orange-500/50 hover:text-orange-600 dark:hover:text-orange-400"
+              className="w-full text-left truncate px-3 py-2 bg-white dark:bg-slate-850 hover:bg-orange-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-750 text-slate-700 dark:text-slate-300 rounded-lg transition-all hover:border-orange-300 dark:hover:border-orange-500/50 hover:text-orange-600 dark:hover:text-orange-400"
             >
               {q}
             </button>
